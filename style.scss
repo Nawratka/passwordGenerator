@@ -1,0 +1,159 @@
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+    --c1: #e8b4b8;
+    --c2: #eed6d3;
+    --c3: #a49393;
+    --c4: #e98980;
+    --c5: #d48c70;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	background-color: #67595e;
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	overflow: hidden;
+}
+
+.circles {
+	width: 100%;
+	height: 100%;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: #595959;
+	border-radius: 50%;
+}
+
+.circle:nth-child(odd) {
+	width: 200px;
+	height: 200px;
+}
+
+.circle--one {
+	top: 10%;
+	left: 20%;
+    background-color: var(--c1);
+}
+.circle--two {
+	top: 40%;
+	left: 70%;
+    background-color: var(--c2);
+}
+.circle--three {
+	top: 30%;
+	left: 90%;
+    background-color: var(--c3);
+}
+.circle--four {
+	top: 50%;
+	left: 40%;
+    background-color: var(--c4);
+}
+.circle--five {
+	top: 90%;
+	left: 70%;
+    background-color: var(--c5);
+}
+
+.container {
+    padding: 3rem;
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 75%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(7px);
+}
+
+.title {
+    margin: 2rem;
+	font-size: 3.5rem;
+    text-align: center;
+}
+
+.resultPassword {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.generateBtn {
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    padding: 1.3rem 4rem;
+    width: 60%;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    transition: background-color .3s;
+    text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.generateBtn:hover {
+    background-color: #dedede;
+}
+
+.conditionBox {
+    width: 100%;
+	margin-bottom: 1rem;
+}
+
+
+#passwordLengthInput {
+	padding: 5px;
+	margin-left: 2rem;
+	// width: 60px;
+}
+
+
+.conditionBox {
+	display: grid;
+	grid-template-columns: 40% 25% auto;
+	font-size: 1.4em;
+	align-content: start;
+}
+
+.conditionBox:first-of-type {
+	display: grid;
+	grid-template-columns: 40% 30% 17%;
+}
+
+.checkbox {
+	width: 15px;
+	height: 15px;
+	grid-column: 2;
+}
